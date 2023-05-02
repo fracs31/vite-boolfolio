@@ -23,6 +23,10 @@
                 .then((res) => {
                     const results = res.data.results; //salvo i risultati
                     this.projects = results; //assegno i risultati ai progetti
+                    console.log(this.projects); //stampo in console i progetti
+                })
+                .catch((err) => {
+                    console.log(err); //stampo gli errori
                 });
             },
         },
@@ -40,7 +44,7 @@
         <!-- Progetto -->
         <li class="project" v-for="project in projects">
             <!-- Carta -->
-            <ProjectCard v-bind:project="project"></ProjectCard>
+            <ProjectCard v-bind:key="project.id" v-bind:project="project"></ProjectCard>
         </li>
     </ul>
 </template>
