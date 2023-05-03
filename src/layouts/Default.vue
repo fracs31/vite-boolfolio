@@ -1,11 +1,13 @@
 <!-- JavaScript -->
 <script>
     import AppHeader from "../components/AppHeader.vue"; //importo l'header
+    import AppMain from "../components/AppMain.vue"; //importo il main
     //Esporto
     export default {
         //Componenti
         components: {
             AppHeader, //header
+            AppMain, //main
         }
     }
 </script>
@@ -14,8 +16,11 @@
 <template>
     <!-- Header -->
     <AppHeader></AppHeader>
-    <!-- Slot -->
-    <slot></slot>
+    <!-- Main -->
+    <AppMain>
+        <!-- Slot -->
+        <slot></slot>
+    </AppMain>
 </template>
 
 <!-- CSS -->
