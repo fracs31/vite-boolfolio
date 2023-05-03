@@ -16,10 +16,17 @@
 <template>
     <!-- Layout -->
     <DefaultLayout>
-        <h1>Portfolio</h1>
+        <!-- Titolo -->
+        <h1 class="title">Portfolio</h1>
+        <!-- Progetti -->
+        <Projects></Projects>
     </DefaultLayout>
 </template>
 
 <!-- CSS -->
 <style scoped>
+    /* Titolo */
+    .title {
+        margin-bottom: 15px;
+    }
 </style>
