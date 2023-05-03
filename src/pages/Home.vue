@@ -1,13 +1,11 @@
 <!-- JavaScript -->
 <script>
     import DefaultLayout from '../layouts/Default.vue'; //importo il layout
-    import Projects from '../components/Projects.vue'; //importo i progetti
     //Esporto
     export default {
         //Componenti
         components: {
             DefaultLayout, //layout
-            Projects, //progetti
         }
     }
 </script>
@@ -16,7 +14,7 @@
 <template>
     <!-- Layout -->
     <DefaultLayout>
-        <h1>Portfolio</h1>
+        <h1>Home</h1>
     </DefaultLayout>
 </template>
 

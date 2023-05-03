@@ -14,15 +14,24 @@
                 <ul class="navbar__list">
                     <!-- Home -->
                     <li class="navbar__list-item">
-                        Home
+                        <!-- Rotta -->
+                        <router-link :to="{ name: 'home' }">
+                            Home
+                        </router-link>
                     </li>
                     <!-- Portfolio -->
                     <li class="navbar__list-item">
-                        Portfolio
+                        <!-- Rotta -->
+                        <router-link :to="{ name: 'portfolio' }">
+                            Portfolio
+                        </router-link>
                     </li>
-                    <!-- Chi siamo -->
+                    <!-- Chi sono -->
                     <li class="navbar__list-item">
-                        Chi siamo
+                        <!-- Rotta -->
+                        <router-link :to="{ name: 'about-me' }">
+                            Chi sono
+                        </router-link>
                     </li>
                 </ul>
             </nav>
