@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router"; //importo il router
 import Home from "./pages/Home.vue"; //importo la pagina home
 import Portfolio from "./pages/Portfolio.vue"; //importo il portfolio
 import AboutMe from "./pages/AboutMe.vue"; //importo la pagina about me
+import SingleProject from "./pages/SingleProject.vue"; //importo la pagina per i singoli progetti
 
 //Router
 const router = createRouter({
@@ -23,6 +24,11 @@ const router = createRouter({
             path: "/about-me", //percorso
             name: "about-me", //nome
             component: AboutMe //componente
+        },
+        {
+            path: "/projects/:slug", //percorso
+            name: "single-project", //nome
+            component: SingleProject //componente
         },
     ]
 });

@@ -39,10 +39,27 @@
                     console.log(err); //stampo gli errori
                 });
             },
-            //Metodo che restituisce i progetti
+            //Metodo che restituisce i progetti dall'url
             fetchProjectsByUrl(url) {
                 //Effettuo la chiamata all'API
                 axios.get(url)
+                .then((res) => {
+                    const results = res.data.results; //salvo i risultati
+                    this.projects = results.data; //assegno i risultati ai progetti
+                    this.currentPage = results.current_page; //pagina corrente
+                    this.links = results.links; //links
+                    console.log("Progetti: ", this.projects); //stampo in console i progetti
+                    console.log("Pagina corrente: ", this.currentPage); //stampo in console i progetti
+                    console.log("Links: ", this.links); //stampo in console i progetti
+                })
+                .catch((err) => {
+                    console.log(err); //stampo gli errori
+                });
+            },
+            //Metodo che restituisce i progetti dallo slug
+            fetchProjectsBySlug(slug) {
+                //Effettuo la chiamata all'API
+                axios.get("http://127.0.0.1:8000/api/projects/" + slug)
                 .then((res) => {
                     const results = res.data.results; //salvo i risultati
                     this.projects = results.data; //assegno i risultati ai progetti
