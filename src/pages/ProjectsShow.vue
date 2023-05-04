@@ -24,7 +24,7 @@
                 axios.get("http://127.0.0.1:8000/api/projects/" + slug)
                 .then((res) => {
                     const results = res.data.results; //salvo i risultati
-                    this.projects = results; //assegno i risultati ai progetti
+                    this.projects.push(results); //assegno i risultati ai progetti
                     console.log("Progetto: ", this.projects); //stampo in console i progetti
                 })
                 .catch((err) => {
