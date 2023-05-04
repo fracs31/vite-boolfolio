@@ -53,7 +53,7 @@
         </li>
       </ul>
       <!-- Router Link -->
-      <router-link :to="{ name: 'single-project', params: { slug: project.slug } }">
+      <router-link :to="{ name: 'projects.show', params: { slug: project.slug } }">
         Vedi il progetto
       </router-link>
     </div>
